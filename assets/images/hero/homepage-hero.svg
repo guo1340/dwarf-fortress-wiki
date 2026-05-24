@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Dwarf Fortress carved mountain archive banner">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#151515"/>
+      <stop offset=".52" stop-color="#222222"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <linearGradient id="lava" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b2f2f"/>
+      <stop offset=".5" stop-color="#e0873f"/>
+      <stop offset="1" stop-color="#c9a66b"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .2"/></feComponentTransfer>
+      <feBlend mode="multiply" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1240" cy="130" r="72" fill="#c9a66b" opacity=".28"/>
+  <path d="M0 520 250 240l160 130 180-250 220 330 150-160 170 180 180-260 290 330v360H0z" fill="#202020"/>
+  <path d="M0 610 310 350l130 90 150-190 210 280 120-108 150 160 210-270 320 300v288H0z" fill="#141414"/>
+  <path d="M0 770c240-60 430-58 680-20 320 48 600 28 920-54v204H0z" fill="#0b0b0b"/>
+  <g transform="translate(620 230)" fill="#1a1a1a" stroke="#6e5634" stroke-width="8">
+    <path d="M0 468V138L170 10l170 128v330z"/>
+    <path d="M48 468V214h244v254z"/>
+    <path d="M76 262h188M76 318h188M76 374h188"/>
+    <path d="M142 468V356h56v112"/>
+  </g>
+  <g transform="translate(142 660)" stroke="#b08d57" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M0 0h320M40-50h240M88-100h144"/>
+    <path d="M80 0v-140M160 0v-170M240 0v-140"/>
+  </g>
+  <g transform="translate(1050 618)">
+    <path d="M0 110h360" stroke="#3a3329" stroke-width="18"/>
+    <path d="M0 84c65 24 118-22 180 0s116 28 180-12v78H0z" fill="url(#lava)" opacity=".9"/>
+    <path d="M72 40h52l32 42H42z" fill="#2d2d2d" stroke="#9ea4aa" stroke-width="6"/>
+    <path d="M214 22h64l34 60H184z" fill="#2d2d2d" stroke="#9ea4aa" stroke-width="6"/>
+  </g>
+  <g fill="#c9a66b" opacity=".65">
+    <rect x="714" y="392" width="32" height="42"/>
+    <rect x="792" y="392" width="32" height="42"/>
+    <rect x="870" y="392" width="32" height="42"/>
+  </g>
+  <g transform="translate(410 540)" fill="none" stroke="#c9a66b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 80h180"/>
+    <path d="M46 80V10h88v70"/>
+    <path d="M20 10h140"/>
+    <path d="M72 10V-42h36v52"/>
+  </g>
+  <g opacity=".4" stroke="#9ea4aa" stroke-width="2">
+    <path d="M0 168h1600M0 336h1600M0 504h1600M0 672h1600"/>
+    <path d="M160 0v900M320 0v900M480 0v900M640 0v900M800 0v900M960 0v900M1120 0v900M1280 0v900M1440 0v900"/>
+  </g>
+  <g font-family="monospace" font-size="26" fill="#b08d57" opacity=".5">
+    <text x="74" y="112">STRIKE THE EARTH</text>
+    <text x="74" y="146">MANAGER ORDER: BREW DRINK</text>
+    <text x="1050" y="122">STEEL CHAIN ACTIVE</text>
+    <text x="1050" y="156">AQUIFER WARNING</text>
+  </g>
+  <rect width="1600" height="900" filter="url(#grain)" opacity=".58"/>
+</svg>
