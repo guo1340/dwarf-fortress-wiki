@@ -41,7 +41,7 @@ global.document = {
 global.localStorage = { getItem: () => null, setItem() {}, removeItem() {} };
 global.history = { pushState() {} };
 let CURRENT = '/';
-global.location = { get pathname() { return CURRENT; }, origin: 'https://dwarffortress.gamewikihub.com' };
+global.location = { get pathname() { return CURRENT; }, origin: 'https://dwarf-fortress.gamewikihub.com' };
 global.window = { addEventListener() {}, scrollTo() {}, adsbygoogle: [] };
 global.URL = URL;
 global.setTimeout = () => {};
@@ -64,6 +64,8 @@ function renderMain(route) {
   CURRENT = route;
   delete require.cache[APP];
   els.main._html = '';
+  els.leftNav._html = '';
+  els.rightNav._html = '';
   require('./js/app.js');
   return els.main._html;
 }
@@ -90,7 +92,10 @@ function buildPage(template, route) {
   let html = template;
   html = html.replace(/<!-- dfw:head -->[\s\S]*?<!-- \/dfw:head -->/, '<!-- dfw:head -->\n' + headBlock(route) + '\n    <!-- /dfw:head -->');
   html = html.replace(/<script type="application\/ld\+json" id="dfw-jsonld">[\s\S]*?<\/script>/, '<script type="application/ld+json" id="dfw-jsonld">' + JSON.stringify(M.jsonLdFor(route)) + '</script>');
-  html = html.replace(/<main id="main">[\s\S]*?<\/main>/, '<main id="main">' + renderMain(route) + '</main>');
+  const mainHtml = renderMain(route);
+  html = html.replace(/<aside class="left" id="leftNav">[\s\S]*?<\/aside>/, '<aside class="left" id="leftNav">' + els.leftNav._html + '</aside>');
+  html = html.replace(/<aside class="right" id="rightNav">[\s\S]*?<\/aside>/, '<aside class="right" id="rightNav">' + els.rightNav._html + '</aside>');
+  html = html.replace(/<main id="main">[\s\S]*?<\/main>/, '<main id="main">' + mainHtml + '</main>');
   return html;
 }
 function routes() {

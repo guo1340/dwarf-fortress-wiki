@@ -2,7 +2,7 @@ window.WikiData = {
   site: {
     name: 'Dwarf Fortress Wiki',
     shortName: 'Dwarf Fortress Wiki',
-    baseUrl: 'https://dwarffortress.gamewikihub.com',
+    baseUrl: 'https://dwarf-fortress.gamewikihub.com',
     titleSuffix: 'Dwarf Fortress Wiki',
     defaultDescription: 'A practical Dwarf Fortress wiki for beginner guides, fortress design, industry chains, military systems, creatures, world generation, adventure mode, mods and DFHack.',
     defaultOgImage: '/assets/images/hero/homepage-hero.svg',

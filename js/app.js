@@ -30,7 +30,7 @@
 
   function adSlot(kind) {
     const banner = kind === 'banner';
-    return `<aside class="ad-slot ad-${esc(kind)}" aria-label="Advertisement"><span class="ad-label">Advertisement</span><ins class="adsbygoogle" style="display:block;${banner ? 'width:100%;height:90px;' : ''}" data-ad-client="ca-pub-1319817671788428" data-ad-slot="6141169453" ${banner ? '' : 'data-ad-format="auto"'} data-full-width-responsive="true"></ins></aside>`;
+    return `<div class="ad-slot ad-${esc(kind)}" role="complementary" aria-label="Advertisement"><span class="ad-label">Guild Notice</span><ins class="adsbygoogle" style="display:block;${banner ? 'width:100%;height:90px;' : ''}" data-ad-client="ca-pub-1319817671788428" data-ad-slot="6141169453" ${banner ? '' : 'data-ad-format="auto"'} data-full-width-responsive="true"></ins></div>`;
   }
   function loadAds() {
     if (!window.adsbygoogle) return;
@@ -43,8 +43,24 @@
     return `<aside class="source-notes"><div class="src-head">Sources &amp; Update Notes</div><div class="src-meta"><span><strong>Last updated:</strong> ${esc(D.site.lastUpdated)}</span><span><strong>Build focus:</strong> ${esc(D.site.buildStatus)}</span></div><ul>${list.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a> - ${esc(s.note)}</li>`).join('')}</ul><p>Exact mechanics, interface names and DFHack commands can vary by version. Verify fragile details before building a fortress around them.</p></aside>`;
   }
   function relatedBlock(p) {
-    if (!p.related || !p.related.length) return '';
-    return `<nav class="related" aria-label="Related guides"><h3>Related Guides</h3><div class="related-grid">${p.related.map((r) => `<a href="${esc(r.href)}">${esc(r.label)}</a>`).join('')}</div></nav>`;
+    const related = relatedPages(p);
+    if (!related.length) return '';
+    return `<nav class="related" aria-label="Related guides"><h3>Related Guides</h3><div class="related-grid">${related.map((r) => `<a href="${esc(r.href)}">${esc(r.label)}</a>`).join('')}</div></nav>`;
+  }
+  function relatedPages(p, count = 5) {
+    const sameCategory = D.pages
+      .filter((candidate) => candidate.category === p.category && candidate.id !== p.id)
+      .slice(0, count)
+      .map((candidate) => ({ label: candidate.title, href: `/${candidate.category}/${candidate.id}` }));
+    const explicit = (p.related || [])
+      .filter((r) => r && r.href && r.href !== `/${p.category}`)
+      .map((r) => ({ label: r.label, href: r.href }));
+    const seen = new Set();
+    return [...explicit, ...sameCategory].filter((item) => {
+      if (seen.has(item.href)) return false;
+      seen.add(item.href);
+      return true;
+    }).slice(0, count);
   }
   function sectionsHTML(sections) {
     return sections.map((s) => `<section class="article-section"><h3>${esc(s.h)}</h3>${s.body || ''}${s.list ? `<ul>${s.list.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</section>`).join('');
@@ -90,7 +106,7 @@
   }
 
   function renderLeftNav(active) {
-    leftNav.innerHTML = `<h3>Archive Wings</h3><ul>${D.categories.map((c) => `<li><a href="/${esc(c.id)}" data-r="/${esc(c.id)}">${esc(c.title)}</a></li>`).join('')}</ul><h3>Site Info</h3><ul><li><a href="/about" data-r="/about">About</a></li><li><a href="/privacy-policy" data-r="/privacy-policy">Privacy Policy</a></li><li><a href="/contact" data-r="/contact">Contact</a></li></ul>${adSlot('half-page')}`;
+    leftNav.innerHTML = `<h3>Fortress Wings</h3><ul>${D.categories.map((c) => `<li><a href="/${esc(c.id)}" data-r="/${esc(c.id)}"><span>${esc(c.title.slice(0, 2).toUpperCase())}</span>${esc(c.title)}</a></li>`).join('')}</ul><h3>Site Info</h3><ul><li><a href="/about" data-r="/about"><span>AB</span>About</a></li><li><a href="/privacy-policy" data-r="/privacy-policy"><span>PP</span>Privacy Policy</a></li><li><a href="/contact" data-r="/contact"><span>CT</span>Contact</a></li></ul>`;
     leftNav.querySelectorAll('a').forEach((a) => {
       const r = a.getAttribute('data-r');
       if (active === r || (r !== '/' && active.startsWith(r + '/'))) a.classList.add('active');
@@ -98,12 +114,12 @@
   }
   function renderRightNav() {
     const tip = D.tips[Math.floor(Math.random() * D.tips.length)];
-    rightNav.innerHTML = `<h3>Popular Guides</h3><ul><li><a href="/beginner-guide/first-fortress-tutorial">First Fortress Tutorial</a></li><li><a href="/industry/steel-production">How Steel Production Works</a></li><li><a href="/guides/best-fortress-layouts">Best Fortress Layouts</a></li><li><a href="/guides/survive-first-winter">Survive First Winter</a></li><li><a href="/military/squad-setup">Military Guide</a></li><li><a href="/world/aquifers">Aquifer Guide</a></li><li><a href="/mods/dfhack-commands">Best DFHack Commands</a></li></ul><h3>Overseer Note</h3><p class="overseer-note">${esc(tip)}</p>${adSlot('rectangle')}`;
+    rightNav.innerHTML = `<h3>Popular Orders</h3><ul><li><a href="/beginner-guide/first-fortress-tutorial"><span>01</span>First Fortress Tutorial</a></li><li><a href="/industry/steel-production"><span>02</span>How Steel Production Works</a></li><li><a href="/guides/best-fortress-layouts"><span>03</span>Best Fortress Layouts</a></li><li><a href="/guides/survive-first-winter"><span>04</span>Survive First Winter</a></li><li><a href="/military/squad-setup"><span>05</span>Military Guide</a></li><li><a href="/world/aquifers"><span>06</span>Aquifer Guide</a></li><li><a href="/mods/dfhack-commands"><span>07</span>Best DFHack Commands</a></li></ul><h3>Overseer Note</h3><p class="overseer-note">${esc(tip)}</p>`;
   }
 
   function renderHome() {
     const featured = ['first-fortress-tutorial', 'fortress-design', 'farming', 'squad-setup', 'steel-production', 'best-embark-locations', 'dfhack-commands'].map((id) => D.pages.find((p) => p.id === id)).filter(Boolean);
-    main.innerHTML = `<section class="hero"><img src="/assets/images/hero/homepage-hero.svg" alt="Dwarf Fortress carved mountain archive banner" /><div class="hero-content"><span class="hero-kicker">Digital dwarven archive</span><h1>Dwarf Fortress Wiki</h1><p>The definitive dwarven archive for fortress management, combat, industry, world generation and survival in the deepest simulation sandbox ever made.</p><div class="hero-buttons"><a class="btn" href="/beginner-guide/getting-started">Start Playing</a><a class="btn" href="/fortress">Fortress Guides</a><a class="btn" href="/beginner-guide/first-fortress-tutorial">Beginner Tutorials</a><a class="btn" href="/industry/industry-chains">Industry Chains</a></div></div></section>${adSlot('banner')}<h2 class="section-head">Featured Categories</h2><div class="cards cat-cards">${D.categories.map((c) => `<a class="card cat-card" href="/${esc(c.id)}"><span class="ico">${icon(c.icon)}</span><h4>${esc(c.title)}</h4><p>${esc(c.summary)}</p><div class="tags"><span>Simulation</span><span>${esc(c.title.split(' ')[0])}</span></div></a>`).join('')}</div><div class="home-grid"><section class="page"><h2>High-Value Guides</h2><div class="breadcrumb">The pages overseers come back to.</div><ul class="link-list">${featured.map((p) => `<li><a href="/${esc(p.category)}/${esc(p.id)}">${esc(p.title)}<span>${esc(p.summary)}</span></a></li>`).join('')}</ul></section><section class="page"><h2>First Fortress Checklist</h2><div class="breadcrumb">Before the first winter.</div><ol><li>Dig bedrooms, dining space and stockpile rooms.</li><li>Start farming and brewing before drink runs low.</li><li>Assign manager, bookkeeper, broker and militia commander.</li><li>Build a trade depot and prepare export goods.</li><li>Seal dangerous paths before breaching caverns.</li><li>Train a small squad before the first siege.</li></ol></section></div>${adSlot('in-article')}`;
+    main.innerHTML = `<section class="hero"><img src="/assets/images/hero/homepage-hero.svg" alt="Dwarf Fortress tile-map mountainhome with halls, workshops, magma and carved records" /><div class="hero-content"><span class="hero-kicker">Strike the earth // overseer ledger</span><h1>Dwarf Fortress Wiki</h1><p>A carved engineering archive for fortress management, dwarven industry, military disasters, world generation, megaprojects and the glorious machinery of losing.</p><div class="hero-buttons"><a class="btn" href="/beginner-guide/getting-started">Start Playing</a><a class="btn" href="/fortress">Fortress Guides</a><a class="btn" href="/beginner-guide/first-fortress-tutorial">Beginner Tutorials</a><a class="btn" href="/industry/industry-chains">Industry Chains</a></div></div></section>${adSlot('banner')}<h2 class="section-head">Featured Categories</h2><div class="cards cat-cards">${D.categories.map((c) => `<a class="card cat-card" href="/${esc(c.id)}"><span class="ico">${icon(c.icon)}</span><h4>${esc(c.title)}</h4><p>${esc(c.summary)}</p><div class="tags"><span>Simulation</span><span>${esc(c.title.split(' ')[0])}</span></div></a>`).join('')}</div><div class="home-grid"><section class="page"><h2>High-Value Guides</h2><div class="breadcrumb">The pages overseers come back to.</div><ul class="link-list">${featured.map((p) => `<li><a href="/${esc(p.category)}/${esc(p.id)}">${esc(p.title)}<span>${esc(p.summary)}</span></a></li>`).join('')}</ul></section><section class="page"><h2>First Fortress Checklist</h2><div class="breadcrumb">Before the first winter.</div><ol><li>Dig bedrooms, dining space and stockpile rooms.</li><li>Start farming and brewing before drink runs low.</li><li>Assign manager, bookkeeper, broker and militia commander.</li><li>Build a trade depot and prepare export goods.</li><li>Seal dangerous paths before breaching caverns.</li><li>Train a small squad before the first siege.</li></ol></section></div>${adSlot('in-article')}`;
   }
   function renderCategory(id) {
     const c = category(id);
