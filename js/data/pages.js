@@ -85,154 +85,164 @@
       "category": "beginner-guide",
       "id": "first-fortress-tutorial",
       "title": "First Fortress Tutorial",
-      "summary": "Your first fortress needs food, drink, beds, stockpiles and a plan for not freezing into chaos.",
+      "summary": "A first fortress should be small, boring and hard to kill: drink, food, beds, workshops, stockpiles, a sealed entrance and a tiny military before ambition takes over.",
       "stats": [
-        "Embark selection",
-        "Digging first rooms",
-        "Beds",
-        "Food setup",
-        "Basic defenses"
+        "Safe embark",
+        "First-week digging",
+        "Food and alcohol",
+        "Bedrooms and morale",
+        "Starter defense"
       ],
       "sections": [
         {
-          "h": "Quick Summary",
-          "body": "<p>Your first fortress needs food, drink, beds, stockpiles and a plan for not freezing into chaos.</p>"
+          "h": "Overview",
+          "body": "<p>Your first fortress is not the place to prove you can build a mountain-spanning palace. It is where you learn the survival loop: shelter, food, alcohol, beds, basic workshops, trade goods and controlled access. The best beginner fort is plain because plain forts are recoverable.</p>"
         },
         {
           "h": "Why It Matters",
-          "body": "<p>Dwarf Fortress turns small logistical decisions into large fortress outcomes. This topic matters because it affects survival, hauling, morale, defense or long-term production stability.</p>"
+          "body": "<p>The first year teaches what the game actually tests. If brewing, hauling, food and defense only work while you stare at them, the second year will expose the weakness. A compact fort lets you see problems before they become legends carved on slabs.</p>"
         },
         {
-          "h": "Requirements",
-          "list": [
-            "Embark selection",
-            "Digging first rooms",
-            "Beds",
-            "Food setup",
-            "Basic defenses"
-          ]
+          "h": "Practical Uses",
+          "body": "<p>Pick a calm embark with soil, trees, water access and no terrifying neighbors. Dig one central stair and carve short rooms off it. Keep the farm, still, food stockpile and dining area close. Make a carpenter, stoneworker, still, kitchen, trade depot and dorm or simple bedrooms before chasing grand architecture.</p>"
         },
         {
-          "h": "Step-by-Step Guide",
-          "body": "<p>Start with the smallest working version, confirm dwarves can reach every required input, then expand with work orders and stockpiles. Keep dangerous systems isolated until you understand how they fail.</p>"
+          "h": "Strengths",
+          "body": "<p>This plan is easy to troubleshoot, keeps hauling short, and gives every dwarf a useful job. It also leaves room to expand into better bedrooms, temples, taverns, hospitals, metalworking and military wings later.</p>"
+        },
+        {
+          "h": "Weaknesses",
+          "body": "<p>A compact starter fort is not glamorous. It can feel slow if you want magma, glass towers or a royal avenue immediately. That restraint is the point: you are building reliability before style.</p>"
+        },
+        {
+          "h": "Community Opinions",
+          "body": "<p>Experienced players usually recommend building smaller than your imagination wants. Repeated community advice focuses on alcohol first, safe entrances, stockpile discipline, and avoiding casual cavern breaches.</p>"
         },
         {
           "h": "Common Mistakes",
           "list": [
-            "Building too far from inputs",
-            "Ignoring hauling time",
-            "Forgetting stockpile permissions",
-            "Expanding before the basic loop works",
-            "Leaving danger paths unsealed"
+            "Digging huge rooms before the survival loop works.",
+            "Building workshops far from inputs.",
+            "Forgetting alcohol because food still looks fine.",
+            "Leaving the entrance open to animals, thieves and sieges.",
+            "Waiting too long to appoint a manager and militia commander."
           ]
         },
         {
-          "h": "Optimization Tips",
-          "body": "<p>Use compact workshop clusters, clear stair access, manager work orders and dedicated stockpiles. The goal is not elegance for its own sake; it is fewer dwarves hauling the wrong stone across half the mountain.</p>"
+          "h": "Recommendations",
+          "body": "<p>Use this priority order: shelter, drink, food, beds, manager, trade goods, entrance control, militia. Everything else can wait. Once those systems are stable, branch into <a href=\"/industry/industry-chains\">Industry Chains</a>, <a href=\"/fortress/fortress-design\">Fortress Design</a> and <a href=\"/military/squad-setup\">Squad Setup</a>.</p>"
         },
         {
-          "h": "FAQ",
-          "list": [
-            "Is this beginner friendly? Yes, if you build the simplest version first.",
-            "Does it work in Steam and Classic? The system usually does, though interface steps can differ.",
-            "What should I read next? Follow the related guide links below."
-          ]
+          "h": "Related Articles",
+          "body": "<p>Continue with <a href=\"/guides/why-fortresses-fail\">Why Fortresses Fail</a>, <a href=\"/guides/survive-first-winter\">Survive First Winter</a>, <a href=\"/beginner-guide/common-beginner-mistakes\">Common Beginner Mistakes</a>, <a href=\"/industry/brewing\">Brewing</a> and <a href=\"/military/squad-setup\">Squad Setup</a>.</p>"
         }
       ],
       "related": [
         {
-          "label": "Embark selection",
-          "href": "/beginner-guide"
+          "label": "Why Fortresses Fail",
+          "href": "/guides/why-fortresses-fail"
         },
         {
-          "label": "Digging first rooms",
-          "href": "/beginner-guide"
+          "label": "Survive First Winter",
+          "href": "/guides/survive-first-winter"
         },
         {
-          "label": "Beds",
-          "href": "/beginner-guide"
+          "label": "Brewing",
+          "href": "/industry/brewing"
+        },
+        {
+          "label": "Fortress Design",
+          "href": "/fortress/fortress-design"
+        },
+        {
+          "label": "Squad Setup",
+          "href": "/military/squad-setup"
         }
       ],
       "sources": [
         "communityWiki",
-        "bay12"
+        "bay12",
+        "reddit",
+        "steamDiscussions"
       ]
     },
     {
       "category": "beginner-guide",
       "id": "common-beginner-mistakes",
       "title": "Common Beginner Mistakes",
-      "summary": "Most fortress collapses begin as small logistical omissions.",
+      "summary": "The biggest beginner mistakes are overbuilding, under-brewing, ignoring stress, skipping defense and expanding faster than the fortress can support.",
       "stats": [
-        "No alcohol",
-        "No food storage",
+        "Alcohol shortages",
+        "Overexpansion",
         "No military",
-        "Cave-ins",
-        "Tantrum spirals"
+        "Bad stockpiles",
+        "Unsealed danger"
       ],
       "sections": [
         {
-          "h": "Quick Summary",
-          "body": "<p>Most fortress collapses begin as small logistical omissions.</p>"
+          "h": "Overview",
+          "body": "<p>Most beginner mistakes are understandable. The game shows you a mountain and your brain designs a capital city. Your seven starting dwarves are not ready to support one. They need a working survival machine first.</p>"
         },
         {
           "h": "Why It Matters",
-          "body": "<p>Dwarf Fortress turns small logistical decisions into large fortress outcomes. This topic matters because it affects survival, hauling, morale, defense or long-term production stability.</p>"
+          "body": "<p>Fixing these mistakes has more impact than memorizing every item. A reliable still, clean stockpiles and a small trained squad save more forts than perfect knowledge of every workshop.</p>"
         },
         {
-          "h": "Requirements",
-          "list": [
-            "No alcohol",
-            "No food storage",
-            "No military",
-            "Cave-ins",
-            "Tantrum spirals"
-          ]
+          "h": "Practical Uses",
+          "body": "<p>Use this as a seasonal audit. If one of the top mistakes applies, fix it before starting a new wing, cavern project, noble suite or magma industry.</p>"
         },
         {
-          "h": "Step-by-Step Guide",
-          "body": "<p>Start with the smallest working version, confirm dwarves can reach every required input, then expand with work orders and stockpiles. Keep dangerous systems isolated until you understand how they fail.</p>"
+          "h": "Strengths",
+          "body": "<p>The advice is simple, high-impact and useful across most normal embarks. It helps explain why a fort that looked fine suddenly collapsed.</p>"
         },
         {
-          "h": "Common Mistakes",
-          "list": [
-            "Building too far from inputs",
-            "Ignoring hauling time",
-            "Forgetting stockpile permissions",
-            "Expanding before the basic loop works",
-            "Leaving danger paths unsealed"
-          ]
+          "h": "Weaknesses",
+          "body": "<p>Some advice is conservative. Experienced players can break these rules on purpose, but beginners should learn why the rules exist first.</p>"
         },
         {
-          "h": "Optimization Tips",
-          "body": "<p>Use compact workshop clusters, clear stair access, manager work orders and dedicated stockpiles. The goal is not elegance for its own sake; it is fewer dwarves hauling the wrong stone across half the mountain.</p>"
+          "h": "Community Opinions",
+          "body": "<p>The community enjoys spectacular disasters, but practical advice is steady: keep drink flowing, stay compact, train early and do not trust open caverns. Perfect layouts are debated; dry, sprawling, undefended forts are not.</p>"
         },
         {
-          "h": "FAQ",
-          "list": [
-            "Is this beginner friendly? Yes, if you build the simplest version first.",
-            "Does it work in Steam and Classic? The system usually does, though interface steps can differ.",
-            "What should I read next? Follow the related guide links below."
-          ]
+          "h": "Ranked Common Mistakes",
+          "body": "<p><strong>1. Running out of alcohol.</strong> Food hides the problem, but drink shortages slow work and stack bad thoughts.</p><p><strong>2. Building too large too early.</strong> Huge halls create hauling debt.</p><p><strong>3. Having no military plan.</strong> A squad created during a siege is late.</p><p><strong>4. Ignoring stress.</strong> Bedrooms, temples, taverns, clothing and corpse handling are infrastructure.</p><p><strong>5. Opening unsafe paths.</strong> Caverns, rivers and map edges need control points.</p>"
+        },
+        {
+          "h": "Recommendations",
+          "body": "<p>When lost, do not add complexity. Stabilize alcohol, prepared meals, beds, refuse, entrance control and a small squad. Once those are boring, the fun projects become safer.</p>"
+        },
+        {
+          "h": "Related Articles",
+          "body": "<p>Read <a href=\"/guides/why-fortresses-fail\">Why Fortresses Fail</a>, <a href=\"/beginner-guide/first-fortress-tutorial\">First Fortress Tutorial</a>, <a href=\"/guides/survive-first-winter\">Survive First Winter</a>, <a href=\"/fortress/bedrooms-happiness\">Bedrooms and Happiness</a> and <a href=\"/world/caverns\">Caverns</a>.</p>"
         }
       ],
       "related": [
         {
-          "label": "No alcohol",
-          "href": "/beginner-guide"
+          "label": "Why Fortresses Fail",
+          "href": "/guides/why-fortresses-fail"
         },
         {
-          "label": "No food storage",
-          "href": "/beginner-guide"
+          "label": "First Fortress Tutorial",
+          "href": "/beginner-guide/first-fortress-tutorial"
         },
         {
-          "label": "No military",
-          "href": "/beginner-guide"
+          "label": "Survive First Winter",
+          "href": "/guides/survive-first-winter"
+        },
+        {
+          "label": "Bedrooms and Happiness",
+          "href": "/fortress/bedrooms-happiness"
+        },
+        {
+          "label": "Caverns",
+          "href": "/world/caverns"
         }
       ],
       "sources": [
         "communityWiki",
-        "bay12"
+        "bay12",
+        "reddit",
+        "steamDiscussions"
       ]
     },
     {
@@ -4551,77 +4561,85 @@
       "category": "guides",
       "id": "survive-first-winter",
       "title": "How to Survive First Winter",
-      "summary": "First winter is a stockpile check disguised as a calendar event.",
+      "summary": "First winter is a logistics test: enough alcohol, preserved food, warm clothing plans, fuel decisions, secure storage and a fortress that can keep working while the map gets less forgiving.",
       "stats": [
-        "Food",
-        "Alcohol",
-        "Bedrooms",
-        "Fuel",
-        "Military basics"
+        "Food reserve",
+        "Alcohol reserve",
+        "Seeds and farming",
+        "Fuel and wood",
+        "Winter checklist"
       ],
       "sections": [
         {
-          "h": "Quick Summary",
-          "body": "<p>First winter is a stockpile check disguised as a calendar event.</p>"
+          "h": "Overview",
+          "body": "<p>The first winter exposes every lazy assumption from spring and summer. If food comes from outdoor gathering, the still depends on one forgotten plant stockpile, or dwarves are sleeping in a hallway, winter makes the weakness visible.</p>"
         },
         {
           "h": "Why It Matters",
-          "body": "<p>Dwarf Fortress turns small logistical decisions into large fortress outcomes. This topic matters because it affects survival, hauling, morale, defense or long-term production stability.</p>"
+          "body": "<p>Surviving winter proves the fortress can run on stored resources. That same skill matters later during sieges, cavern lockdowns and unlucky production gaps.</p>"
         },
         {
-          "h": "Requirements",
-          "list": [
-            "Food",
-            "Alcohol",
-            "Bedrooms",
-            "Fuel",
-            "Military basics"
-          ]
+          "h": "Practical Uses",
+          "body": "<p>Before autumn ends, check drink, meals, brewable plants, seeds, barrels or pots, fuel, wood, beds and entrance security. If any are weak, stop decorative work and fix the survival loop.</p>"
         },
         {
-          "h": "Step-by-Step Guide",
-          "body": "<p>Start with the smallest working version, confirm dwarves can reach every required input, then expand with work orders and stockpiles. Keep dangerous systems isolated until you understand how they fail.</p>"
+          "h": "Strengths",
+          "body": "<p>A winter checklist makes the season predictable. It forces good stockpile habits and prepares the same reserves needed for later emergencies.</p>"
+        },
+        {
+          "h": "Weaknesses",
+          "body": "<p>Warm biomes may barely punish you, while cold or low-resource embarks need stricter planning. Exact reserves depend on population and migration waves.</p>"
+        },
+        {
+          "h": "Community Opinions",
+          "body": "<p>Experienced players usually treat alcohol as the real winter resource. Food matters, but a dry fortress becomes slow and unhappy. The common advice is to overproduce drink, protect seeds and make brewing boring.</p>"
         },
         {
           "h": "Common Mistakes",
           "list": [
-            "Building too far from inputs",
-            "Ignoring hauling time",
-            "Forgetting stockpile permissions",
-            "Expanding before the basic loop works",
-            "Leaving danger paths unsealed"
+            "Cooking away seed stock.",
+            "Forgetting empty barrels or pots for brewing.",
+            "Relying on outdoor gathering after weather changes.",
+            "Taking a huge migrant wave without scaling bedrooms and drink.",
+            "Starting steel or magma projects before food and drink are stable."
           ]
         },
         {
-          "h": "Optimization Tips",
-          "body": "<p>Use compact workshop clusters, clear stair access, manager work orders and dedicated stockpiles. The goal is not elegance for its own sake; it is fewer dwarves hauling the wrong stone across half the mountain.</p>"
+          "h": "Recommendations",
+          "body": "<p>Aim for a buffer, not an exact minimum: plenty of drinks, prepared meals, spare seeds and an active still. Use manager work orders when available and forbid kitchens from consuming plants you need for seeds or brewing.</p>"
         },
         {
-          "h": "FAQ",
-          "list": [
-            "Is this beginner friendly? Yes, if you build the simplest version first.",
-            "Does it work in Steam and Classic? The system usually does, though interface steps can differ.",
-            "What should I read next? Follow the related guide links below."
-          ]
+          "h": "Related Articles",
+          "body": "<p>Useful next reads: <a href=\"/industry/brewing\">Brewing</a>, <a href=\"/industry/farming\">Farming</a>, <a href=\"/industry/cooking\">Cooking</a>, <a href=\"/guides/why-fortresses-fail\">Why Fortresses Fail</a> and <a href=\"/beginner-guide/first-fortress-tutorial\">First Fortress Tutorial</a>.</p>"
         }
       ],
       "related": [
         {
-          "label": "Food",
-          "href": "/guides"
+          "label": "Brewing",
+          "href": "/industry/brewing"
         },
         {
-          "label": "Alcohol",
-          "href": "/guides"
+          "label": "Farming",
+          "href": "/industry/farming"
         },
         {
-          "label": "Bedrooms",
-          "href": "/guides"
+          "label": "Cooking",
+          "href": "/industry/cooking"
+        },
+        {
+          "label": "Why Fortresses Fail",
+          "href": "/guides/why-fortresses-fail"
+        },
+        {
+          "label": "First Fortress Tutorial",
+          "href": "/beginner-guide/first-fortress-tutorial"
         }
       ],
       "sources": [
         "communityWiki",
-        "bay12"
+        "bay12",
+        "reddit",
+        "steamDiscussions"
       ]
     },
     {
@@ -4781,78 +4799,87 @@
     {
       "category": "guides",
       "id": "best-military-setup",
-      "title": "Best Military Setup",
-      "summary": "A reliable military is trained early, equipped clearly and protected from pathing nonsense.",
+      "title": "Best Military Setup for Beginners",
+      "summary": "The best beginner military is small, trained early, equipped consistently and used behind controlled entrances instead of thrown into open chaos.",
       "stats": [
-        "Squads",
+        "First squad",
+        "Training schedule",
         "Uniforms",
-        "Training",
-        "Alerts",
-        "Defenses"
+        "Entrance defense",
+        "Advanced upgrades"
       ],
       "sections": [
         {
-          "h": "Quick Summary",
-          "body": "<p>A reliable military is trained early, equipped clearly and protected from pathing nonsense.</p>"
+          "h": "Overview",
+          "body": "<p>A good military is less about heroic dwarves and more about preparation. You want a squad that already exists, already trains, already has assigned gear and fights in a place you designed.</p>"
         },
         {
           "h": "Why It Matters",
-          "body": "<p>Dwarf Fortress turns small logistical decisions into large fortress outcomes. This topic matters because it affects survival, hauling, morale, defense or long-term production stability.</p>"
+          "body": "<p>Military setup is one of the biggest beginner walls because the interface asks for squads, uniforms, schedules, barracks and equipment while danger is already moving. A modest early squad turns panic into routine.</p>"
         },
         {
-          "h": "Requirements",
-          "list": [
-            "Squads",
-            "Uniforms",
-            "Training",
-            "Alerts",
-            "Defenses"
-          ]
+          "h": "Practical Uses",
+          "body": "<p>Start with one squad of five to ten dwarves. Give them a barracks, a simple training schedule and consistent equipment. You do not need perfect steel immediately; you need trained dwarves, assigned armor and a controlled entrance.</p>"
         },
         {
-          "h": "Step-by-Step Guide",
-          "body": "<p>Start with the smallest working version, confirm dwarves can reach every required input, then expand with work orders and stockpiles. Keep dangerous systems isolated until you understand how they fail.</p>"
+          "h": "Strengths",
+          "body": "<p>Small squads are easy to equip and monitor. Early training prevents emergency panic, and a choke point multiplies the value of mediocre soldiers.</p>"
+        },
+        {
+          "h": "Weaknesses",
+          "body": "<p>Training removes labor from the economy, uniform assignment can be fiddly, and a small squad cannot solve every titan, forgotten beast or siege. Bad pathing can still ruin a good plan.</p>"
+        },
+        {
+          "h": "Community Opinions",
+          "body": "<p>Veterans debate trap-heavy versus soldier-heavy defenses. Both work. Most agree that relying on absolutely no trained dwarves is fragile. A small militia plus bridges, traps or chokepoints is the beginner-friendly compromise.</p>"
         },
         {
           "h": "Common Mistakes",
           "list": [
-            "Building too far from inputs",
-            "Ignoring hauling time",
-            "Forgetting stockpile permissions",
-            "Expanding before the basic loop works",
-            "Leaving danger paths unsealed"
+            "Creating squads only after the siege alert.",
+            "Mixing weapons so equipment becomes inconsistent.",
+            "Training without a proper barracks.",
+            "Letting civilians path through the battle area.",
+            "Sending soldiers into open ground instead of using a choke point.",
+            "Ignoring armor because weapons feel more exciting."
           ]
         },
         {
-          "h": "Optimization Tips",
-          "body": "<p>Use compact workshop clusters, clear stair access, manager work orders and dedicated stockpiles. The goal is not elegance for its own sake; it is fewer dwarves hauling the wrong stone across half the mountain.</p>"
+          "h": "Recommendations",
+          "body": "<p>Use a simple plan: one squad, one weapon family, one barracks, one controlled entrance. Upgrade armor and weapons as industry improves, then add specialized squads for marksdwarves, cavern patrols or siege response.</p>"
         },
         {
-          "h": "FAQ",
-          "list": [
-            "Is this beginner friendly? Yes, if you build the simplest version first.",
-            "Does it work in Steam and Classic? The system usually does, though interface steps can differ.",
-            "What should I read next? Follow the related guide links below."
-          ]
+          "h": "Related Articles",
+          "body": "<p>Build this alongside <a href=\"/military/squad-setup\">Squad Setup</a>, <a href=\"/military/defenses\">Defenses</a>, <a href=\"/military/weapons\">Weapons</a>, <a href=\"/industry/steel-production\">Steel Production</a> and <a href=\"/guides/why-fortresses-fail\">Why Fortresses Fail</a>.</p>"
         }
       ],
       "related": [
         {
-          "label": "Squads",
-          "href": "/guides"
+          "label": "Squad Setup",
+          "href": "/military/squad-setup"
         },
         {
-          "label": "Uniforms",
-          "href": "/guides"
+          "label": "Defenses",
+          "href": "/military/defenses"
         },
         {
-          "label": "Training",
-          "href": "/guides"
+          "label": "Weapons",
+          "href": "/military/weapons"
+        },
+        {
+          "label": "Steel Production",
+          "href": "/industry/steel-production"
+        },
+        {
+          "label": "Why Fortresses Fail",
+          "href": "/guides/why-fortresses-fail"
         }
       ],
       "sources": [
         "communityWiki",
-        "bay12"
+        "bay12",
+        "reddit",
+        "steamDiscussions"
       ]
     },
     {
@@ -5700,6 +5727,92 @@
       "sources": [
         "communityWiki",
         "bay12"
+      ]
+    },
+    {
+      "category": "guides",
+      "id": "why-fortresses-fail",
+      "title": "Why Fortresses Fail",
+      "summary": "Most Dwarf Fortress disasters are slow chains of drink shortages, bad layouts, ignored moods, untrained soldiers, open caverns and overconfident expansion.",
+      "stats": [
+        "Drink and food chains",
+        "Stress and moods",
+        "Military readiness",
+        "Population control",
+        "Cavern and siege safety"
+      ],
+      "sections": [
+        {
+          "h": "Overview",
+          "body": "<p>A fortress usually fails before the final disaster looks dramatic. The visible cause might be a goblin siege, a forgotten beast, a winter food crash, a vampire mayor, or a tantrum spiral. The deeper cause is usually that the fort had no margin. Dwarf Fortress punishes systems that only work while everything is calm.</p><p>The veteran habit is to read every loss as a chain. A brewer stops because empty barrels are missing. Dwarves drink water, work slows down, bad thoughts stack, hauling falls behind, a migrant wave doubles the mouths to feed, and the first siege arrives while the militia is still imaginary. That looks like a military failure, but it began as logistics.</p>"
+        },
+        {
+          "h": "Why It Matters",
+          "body": "<p>Understanding collapse chains is the fastest way to improve. New players often ask, “What killed my fortress?” Experienced overseers ask, “Which backup system did I forget?” That question changes how you build. You stop chasing one perfect layout and start making boring systems that keep working under stress.</p><p>Use this guide with <a href=\"/beginner-guide/first-fortress-tutorial\">First Fortress Tutorial</a>, <a href=\"/guides/survive-first-winter\">Survive First Winter</a>, and <a href=\"/guides/stop-tantrum-spirals\">Stop Tantrum Spirals</a>.</p>"
+        },
+        {
+          "h": "Practical Uses",
+          "body": "<p>Do a seasonal failure audit. Check drink, prepared meals, brewable plants, seeds, corpse handling, refuse routes, hospital soap, squad training, entrance security and cavern seals. If two of those are weak at once, stop expanding and stabilize.</p><p>After a disaster, identify the first weak link rather than the last event. If goblins killed civilians, ask why civilians could path there. If dwarves tantrumed, ask which bad thoughts became routine. If industry stopped, ask where hauling distance or stockpile rules broke the loop.</p>"
+        },
+        {
+          "h": "Strengths",
+          "body": "<p>This approach teaches diagnosis instead of rote build orders. It works across Steam and Classic because the exact interface changes more often than the failure patterns. It also turns losing into useful information instead of pure frustration.</p>"
+        },
+        {
+          "h": "Weaknesses",
+          "body": "<p>This advice is intentionally conservative. Challenge forts, evil biomes, high population caps and open cavern play can be fun, but they are poor teaching tools. Some disasters are also part of the charm; preventing every strange story would make the game less memorable.</p>"
+        },
+        {
+          "h": "Community Opinions",
+          "body": "<p>Community advice is consistent on the fundamentals: keep alcohol flowing, keep the fort compact, train soldiers early, and never open caverns without a plan to close them again. Players debate exact layouts and weapon preferences, but few veterans recommend a dry, sprawling, undefended fort with open underground access.</p>"
+        },
+        {
+          "h": "Common Mistakes",
+          "list": [
+            "Treating bedrooms, temples and taverns as decoration instead of stress control.",
+            "Accepting migration waves without scaling drink, beds and hauling.",
+            "Opening caverns without a sealable choke point.",
+            "Building a military only after enemies arrive.",
+            "Letting corpses, refuse and miasma sit on common traffic paths.",
+            "Assuming a correct workshop chain works if inputs are half a map away."
+          ]
+        },
+        {
+          "h": "Recommendations",
+          "body": "<p>For a stable learning fort, stay boring: short hallways, one main stair, compact workshops, a protected farm and still, a refuse path away from dining areas, and a bridge-controlled entrance. Keep population around a level you can actually house and feed, then raise it only when the fort is stable.</p>"
+        },
+        {
+          "h": "Related Articles",
+          "body": "<p>Next reads: <a href=\"/beginner-guide/common-beginner-mistakes\">Common Beginner Mistakes</a>, <a href=\"/fortress/bedrooms-happiness\">Bedrooms and Happiness</a>, <a href=\"/military/squad-setup\">Squad Setup</a>, <a href=\"/world/caverns\">Caverns</a>, and <a href=\"/guides/fps-optimization\">FPS Optimization</a>.</p>"
+        }
+      ],
+      "related": [
+        {
+          "label": "Common Beginner Mistakes",
+          "href": "/beginner-guide/common-beginner-mistakes"
+        },
+        {
+          "label": "Survive First Winter",
+          "href": "/guides/survive-first-winter"
+        },
+        {
+          "label": "Stop Tantrum Spirals",
+          "href": "/guides/stop-tantrum-spirals"
+        },
+        {
+          "label": "Squad Setup",
+          "href": "/military/squad-setup"
+        },
+        {
+          "label": "Caverns",
+          "href": "/world/caverns"
+        }
+      ],
+      "sources": [
+        "communityWiki",
+        "bay12",
+        "reddit",
+        "steamDiscussions"
       ]
     }
   ]

@@ -10,7 +10,7 @@
     "titleSuffix": "Dwarf Fortress Wiki",
     "defaultDescription": "A practical Dwarf Fortress wiki for beginner guides, fortress design, industry chains, military systems, creatures, world generation, adventure mode, mods and DFHack.",
     "defaultOgImage": "/assets/images/hero/homepage-hero.svg",
-    "lastUpdated": "2026-05-24",
+    "lastUpdated": "2026-06-02",
     "buildStatus": "Steam and Classic guidance; verify exact mechanics against your game version."
   },
   "sourceRegistry": {
@@ -33,6 +33,16 @@
       "label": "DFHack Documentation",
       "url": "https://docs.dfhack.org/",
       "note": "Primary reference for DFHack tools, commands and automation."
+    },
+    "reddit": {
+      "label": "r/dwarffortress Community Discussions",
+      "url": "https://www.reddit.com/r/dwarffortress/",
+      "note": "Used for recurring beginner questions, common mistakes, and strategy debates. Advice is summarized, not copied."
+    },
+    "steamDiscussions": {
+      "label": "Steam Community Discussions",
+      "url": "https://steamcommunity.com/app/975370/discussions/",
+      "note": "Used for new-player confusion around the Steam edition UI, early fortress failures, and military setup questions."
     }
   },
   "categories": [
@@ -88,7 +98,7 @@
       "id": "guides",
       "title": "Guides",
       "icon": "scroll",
-      "summary": "High-traffic guides for tantrums, steel, embark, food, military, FPS and engineering."
+      "summary": "High-traffic strategy guides for fortress collapse, tantrums, winter survival, embark choices, food, military, FPS and engineering."
     },
     {
       "id": "blueprints",
