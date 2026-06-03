@@ -30,58 +30,20 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1319817671788428" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header class="site">
-      <a class="logo" href="/">
-        <span class="logo-mark">DF</span>
-        <span class="logo-text">DWARF FORTRESS<small>unofficial engineering archive</small></span>
-      </a>
-      <div class="search">
-        <input type="text" id="searchInput" placeholder="Search steel, taverns, sieges, aquifers..." autocomplete="off" aria-label="Search the wiki" />
-        <div class="search-results" id="searchResults"></div>
-      </div>
-      <nav class="top" aria-label="Primary">
-        <a href="/beginner-guide">Beginner Guide</a>
-        <a href="/fortress">Fortress</a>
-        <a href="/industry">Industry</a>
-        <a href="/military">Military</a>
-        <a href="/creatures">Creatures</a>
-        <a href="/world">World</a>
-        <a href="/adventure-mode">Adventure Mode</a>
-        <a href="/mods">Mods</a>
-        <a href="/guides">Guides</a>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">Menu</button>
-    </header>
-
-    <div class="engraving-bar" aria-hidden="true">
-      <span>STRIKE THE EARTH - BREW BEFORE WINTER - ASSIGN A MANAGER - TRAIN THE MILITIA - RESPECT THE AQUIFER</span>
-      <span>STRIKE THE EARTH - BREW BEFORE WINTER - ASSIGN A MANAGER - TRAIN THE MILITIA - RESPECT THE AQUIFER</span>
-    </div>
+    <div data-partial="/partials/header.html"></div>
+    <div data-partial="/partials/engraving-bar.html"></div>
 
     <div class="layout">
-      <aside class="left" id="leftNav"><h3>Fortress Wings</h3><ul><li><a href="/beginner-guide" data-r="/beginner-guide"><span>BE</span>Beginner Guide</a></li><li><a href="/fortress" data-r="/fortress"><span>FO</span>Fortress</a></li><li><a href="/industry" data-r="/industry"><span>IN</span>Industry</a></li><li><a href="/military" data-r="/military"><span>MI</span>Military</a></li><li><a href="/creatures" data-r="/creatures"><span>CR</span>Creatures</a></li><li><a href="/world" data-r="/world"><span>WO</span>World</a></li><li><a href="/adventure-mode" data-r="/adventure-mode"><span>AD</span>Adventure Mode</a></li><li><a href="/mods" data-r="/mods"><span>MO</span>Mods &amp; DFHack</a></li><li><a href="/guides" data-r="/guides"><span>GU</span>Guides</a></li><li><a href="/blueprints" data-r="/blueprints"><span>BL</span>Blueprints</a></li><li><a href="/updates" data-r="/updates"><span>UP</span>Updates</a></li></ul><h3>Site Info</h3><ul><li><a href="/about" data-r="/about"><span>AB</span>About</a></li><li><a href="/privacy-policy" data-r="/privacy-policy"><span>PP</span>Privacy Policy</a></li><li><a href="/contact" data-r="/contact"><span>CT</span>Contact</a></li></ul></aside>
+      <aside class="left" id="leftNav" data-partial="/partials/sidebar-left.html"></aside>
       <main id="main"><div class="ad-slot ad-banner" role="complementary" aria-label="Advertisement"><span class="ad-label">Guild Notice</span><ins class="adsbygoogle" style="display:block;width:100%;height:90px;" data-ad-client="ca-pub-1319817671788428" data-ad-slot="6141169453"  data-full-width-responsive="true"></ins></div><section class="page"><h1>Updates</h1><div class="breadcrumb">Home / Updates</div><p class="lead">Steam update summaries, patch notes, dev diary summaries and roadmap watchpoints.</p><div class="category-guidance"><section class="article-section"><h3>How To Read Updates</h3><p>Dwarf Fortress updates are worth reading through a practical lens: what changes how you build, defend, assign labor, manage stress, or use the interface? Patch notes can mention dozens of fixes, but the important question for an active fortress is whether any change affects pathing, military behavior, workshops, saves, mods or DFHack workflows.</p><p>Returning players should scan update summaries before resuming an old fort. Even small interface and bug-fix changes can make old habits less efficient, especially around Steam edition quality-of-life tools, adventure mode work, workshop changes and community utility support.</p></section><section class="article-section"><h3>Common Mistakes</h3><ul><li>Resuming a heavily modded save without checking whether Workshop mods and DFHack are compatible.</li><li>Assuming an old tutorial still matches the current Steam interface.</li><li>Treating patch notes as trivia instead of looking for changes that affect active fortress systems.</li><li>Ignoring dev diaries when planning long-term forts that depend on future systems or major mode updates.</li></ul></section><section class="article-section"><h3>Recommended Approach</h3><p>Use patch notes for immediate save safety and dev diary summaries for long-term expectations. If a change touches military, hauling, jobs, pathing, adventure mode or mod tooling, treat it as something to verify in a small test fort before risking a major mountainhome.</p></section></div><div class="cards"><a class="card" href="/updates/patch-notes"><h4>Patch Notes</h4><p>Patch notes matter because interface, balance and bug fixes reshape fortress management.</p></a><a class="card" href="/updates/dev-diary-summaries"><h4>Dev Diary Summaries</h4><p>Dev diaries help returning overseers understand where the simulation is headed.</p></a></div></section><div class="ad-slot ad-in-article" role="complementary" aria-label="Advertisement"><span class="ad-label">Guild Notice</span><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-1319817671788428" data-ad-slot="6141169453" data-ad-format="auto" data-full-width-responsive="true"></ins></div></main>
-      <aside class="right" id="rightNav"><h3>Popular Orders</h3><ul><li><a href="/beginner-guide/first-fortress-tutorial"><span>01</span>First Fortress Tutorial</a></li><li><a href="/industry/steel-production"><span>02</span>How Steel Production Works</a></li><li><a href="/guides/best-fortress-layouts"><span>03</span>Best Fortress Layouts</a></li><li><a href="/guides/survive-first-winter"><span>04</span>Survive First Winter</a></li><li><a href="/military/squad-setup"><span>05</span>Military Guide</a></li><li><a href="/world/aquifers"><span>06</span>Aquifer Guide</a></li><li><a href="/mods/dfhack-commands"><span>07</span>Best DFHack Commands</a></li></ul><h3>Overseer Note</h3><p class="overseer-note">Do not breach caverns without a way to seal the breach.</p></aside>
+      <aside class="right" id="rightNav" data-partial="/partials/sidebar-right.html"></aside>
     </div>
 
-    <footer class="site">
-      <p class="footer-tagline">A fortress survives by systems, not luck.</p>
-      <nav class="footer-links" aria-label="External resources">
-        <a href="https://www.bay12games.com/dwarves/" target="_blank" rel="noopener noreferrer">Bay 12 Games</a>
-        <a href="https://store.steampowered.com/app/975370/Dwarf_Fortress/" target="_blank" rel="noopener noreferrer">Steam</a>
-        <a href="https://dwarffortresswiki.org/" target="_blank" rel="noopener noreferrer">Community Wiki</a>
-        <a href="/updates">Updates</a>
-      </nav>
-      <nav class="footer-links" aria-label="Site information">
-        <a href="/about">About</a>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <p>Unofficial fan wiki. Dwarf Fortress is owned by Bay 12 Games. GameWikiHub &copy; 2026.</p>
-    </footer>
+    <div data-partial="/partials/footer.html"></div>
 
     <script src="/js/data.js"></script>
     <script src="/js/meta.js"></script>
+    <script src="/js/partials.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>

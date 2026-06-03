@@ -30,58 +30,20 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1319817671788428" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header class="site">
-      <a class="logo" href="/">
-        <span class="logo-mark">DF</span>
-        <span class="logo-text">DWARF FORTRESS<small>unofficial engineering archive</small></span>
-      </a>
-      <div class="search">
-        <input type="text" id="searchInput" placeholder="Search steel, taverns, sieges, aquifers..." autocomplete="off" aria-label="Search the wiki" />
-        <div class="search-results" id="searchResults"></div>
-      </div>
-      <nav class="top" aria-label="Primary">
-        <a href="/beginner-guide">Beginner Guide</a>
-        <a href="/fortress">Fortress</a>
-        <a href="/industry">Industry</a>
-        <a href="/military">Military</a>
-        <a href="/creatures">Creatures</a>
-        <a href="/world">World</a>
-        <a href="/adventure-mode">Adventure Mode</a>
-        <a href="/mods">Mods</a>
-        <a href="/guides">Guides</a>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">Menu</button>
-    </header>
-
-    <div class="engraving-bar" aria-hidden="true">
-      <span>STRIKE THE EARTH - BREW BEFORE WINTER - ASSIGN A MANAGER - TRAIN THE MILITIA - RESPECT THE AQUIFER</span>
-      <span>STRIKE THE EARTH - BREW BEFORE WINTER - ASSIGN A MANAGER - TRAIN THE MILITIA - RESPECT THE AQUIFER</span>
-    </div>
+    <div data-partial="/partials/header.html"></div>
+    <div data-partial="/partials/engraving-bar.html"></div>
 
     <div class="layout">
-      <aside class="left" id="leftNav"><h3>Fortress Wings</h3><ul><li><a href="/beginner-guide" data-r="/beginner-guide"><span>BE</span>Beginner Guide</a></li><li><a href="/fortress" data-r="/fortress"><span>FO</span>Fortress</a></li><li><a href="/industry" data-r="/industry"><span>IN</span>Industry</a></li><li><a href="/military" data-r="/military"><span>MI</span>Military</a></li><li><a href="/creatures" data-r="/creatures"><span>CR</span>Creatures</a></li><li><a href="/world" data-r="/world"><span>WO</span>World</a></li><li><a href="/adventure-mode" data-r="/adventure-mode"><span>AD</span>Adventure Mode</a></li><li><a href="/mods" data-r="/mods"><span>MO</span>Mods &amp; DFHack</a></li><li><a href="/guides" data-r="/guides"><span>GU</span>Guides</a></li><li><a href="/blueprints" data-r="/blueprints"><span>BL</span>Blueprints</a></li><li><a href="/updates" data-r="/updates"><span>UP</span>Updates</a></li></ul><h3>Site Info</h3><ul><li><a href="/about" data-r="/about"><span>AB</span>About</a></li><li><a href="/privacy-policy" data-r="/privacy-policy"><span>PP</span>Privacy Policy</a></li><li><a href="/contact" data-r="/contact"><span>CT</span>Contact</a></li></ul></aside>
+      <aside class="left" id="leftNav" data-partial="/partials/sidebar-left.html"></aside>
       <main id="main"><div class="ad-slot ad-banner" role="complementary" aria-label="Advertisement"><span class="ad-label">Guild Notice</span><ins class="adsbygoogle" style="display:block;width:100%;height:90px;" data-ad-client="ca-pub-1319817671788428" data-ad-slot="6141169453"  data-full-width-responsive="true"></ins></div><article class="page article"><div class="breadcrumb"><a href="/military">Military</a> / Squad Setup</div><h1>Squad Setup</h1><p class="lead">A militia that exists only after the siege starts is a memorial project.</p><div class="info-grid"><div><section class="article-section"><h3>Quick Summary</h3><p>A militia that exists only after the siege starts is a memorial project.</p></section><section class="article-section"><h3>Why It Matters</h3><p>Dwarf Fortress turns small logistical decisions into large fortress outcomes. This topic matters because it affects survival, hauling, morale, defense or long-term production stability.</p></section><section class="article-section"><h3>Requirements</h3><ul><li>Squad organization</li><li>Training schedules</li><li>Equipment assignment</li><li>Barracks</li><li>Alerts</li></ul></section><section class="article-section"><h3>Step-by-Step Guide</h3><p>Start with the smallest working version, confirm dwarves can reach every required input, then expand with work orders and stockpiles. Keep dangerous systems isolated until you understand how they fail.</p></section><section class="article-section"><h3>Common Mistakes</h3><ul><li>Building too far from inputs</li><li>Ignoring hauling time</li><li>Forgetting stockpile permissions</li><li>Expanding before the basic loop works</li><li>Leaving danger paths unsealed</li></ul></section><section class="article-section"><h3>Optimization Tips</h3><p>Use compact workshop clusters, clear stair access, manager work orders and dedicated stockpiles. The goal is not elegance for its own sake; it is fewer dwarves hauling the wrong stone across half the mountain.</p></section><section class="article-section"><h3>FAQ</h3><ul><li>Is this beginner friendly? Yes, if you build the simplest version first.</li><li>Does it work in Steam and Classic? The system usually does, though interface steps can differ.</li><li>What should I read next? Follow the related guide links below.</li></ul></section><nav class="related" aria-label="Related guides"><h3>Related Guides</h3><div class="related-grid"><a href="/military/weapons">Weapons</a><a href="/military/armor">Armor</a><a href="/military/defenses">Defenses</a><a href="/military/sieges">Sieges</a><a href="/military/war-animals">War Animals</a></div></nav><aside class="source-notes"><div class="src-head">Sources &amp; Update Notes</div><div class="src-meta"><span><strong>Last updated:</strong> 2026-06-02</span><span><strong>Build focus:</strong> Steam and Classic guidance; verify exact mechanics against your game version.</span></div><ul><li><a href="https://dwarffortresswiki.org/" target="_blank" rel="noopener noreferrer">Dwarf Fortress Wiki</a> - Community mechanics reference for systems, items and creatures.</li><li><a href="https://www.bay12games.com/dwarves/" target="_blank" rel="noopener noreferrer">Bay 12 Games</a> - Official Dwarf Fortress source and developer updates.</li></ul><p>Exact mechanics, interface names and DFHack commands can vary by version. Verify fragile details before building a fortress around them.</p></aside></div><aside class="infobox"><div class="infobox-head">Requirements</div><dl><dt>01</dt><dd>Squad organization</dd><dt>02</dt><dd>Training schedules</dd><dt>03</dt><dd>Equipment assignment</dd><dt>04</dt><dd>Barracks</dd><dt>05</dt><dd>Alerts</dd></dl></aside></div></article><div class="ad-slot ad-in-article" role="complementary" aria-label="Advertisement"><span class="ad-label">Guild Notice</span><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-1319817671788428" data-ad-slot="6141169453" data-ad-format="auto" data-full-width-responsive="true"></ins></div></main>
-      <aside class="right" id="rightNav"><h3>Popular Orders</h3><ul><li><a href="/beginner-guide/first-fortress-tutorial"><span>01</span>First Fortress Tutorial</a></li><li><a href="/industry/steel-production"><span>02</span>How Steel Production Works</a></li><li><a href="/guides/best-fortress-layouts"><span>03</span>Best Fortress Layouts</a></li><li><a href="/guides/survive-first-winter"><span>04</span>Survive First Winter</a></li><li><a href="/military/squad-setup"><span>05</span>Military Guide</a></li><li><a href="/world/aquifers"><span>06</span>Aquifer Guide</a></li><li><a href="/mods/dfhack-commands"><span>07</span>Best DFHack Commands</a></li></ul><h3>Overseer Note</h3><p class="overseer-note">A hospital without soap is optimism with beds.</p></aside>
+      <aside class="right" id="rightNav" data-partial="/partials/sidebar-right.html"></aside>
     </div>
 
-    <footer class="site">
-      <p class="footer-tagline">A fortress survives by systems, not luck.</p>
-      <nav class="footer-links" aria-label="External resources">
-        <a href="https://www.bay12games.com/dwarves/" target="_blank" rel="noopener noreferrer">Bay 12 Games</a>
-        <a href="https://store.steampowered.com/app/975370/Dwarf_Fortress/" target="_blank" rel="noopener noreferrer">Steam</a>
-        <a href="https://dwarffortresswiki.org/" target="_blank" rel="noopener noreferrer">Community Wiki</a>
-        <a href="/updates">Updates</a>
-      </nav>
-      <nav class="footer-links" aria-label="Site information">
-        <a href="/about">About</a>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <p>Unofficial fan wiki. Dwarf Fortress is owned by Bay 12 Games. GameWikiHub &copy; 2026.</p>
-    </footer>
+    <div data-partial="/partials/footer.html"></div>
 
     <script src="/js/data.js"></script>
     <script src="/js/meta.js"></script>
+    <script src="/js/partials.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>

@@ -69,7 +69,7 @@
     blueprints: [
       {
         h: 'How To Use These Blueprints',
-        body: '<p>Blueprints are starting points, not sacred diagrams. A good Dwarf Fortress layout solves one problem clearly: short hauling routes, safer entrances, cleaner industry chains, or a megaproject that can be expanded without trapping half the fort behind construction jobs.</p><p>When copying a layout, check your embark first. Soil depth, aquifers, magma access, cavern height and surface threats can all change what “best” means. The strongest designs are easy to seal, easy to inspect, and boring enough that you can find a broken stockpile rule before the fort starts starving.</p>'
+        body: '<p>Blueprints are starting points, not sacred diagrams. A good Dwarf Fortress layout solves one problem clearly: short hauling routes, safer entrances, cleaner industry chains, or a megaproject that can be expanded without trapping half the fort behind construction jobs.</p><p>When copying a layout, check your embark first. Soil depth, aquifers, magma access, cavern height and surface threats can all change what "best" means. The strongest designs are easy to seal, easy to inspect, and boring enough that you can find a broken stockpile rule before the fort starts starving.</p>'
       },
       {
         h: 'Common Planning Mistakes',
@@ -146,15 +146,17 @@
   }
 
   function renderLeftNav(active) {
-    leftNav.innerHTML = `<h3>Fortress Wings</h3><ul>${D.categories.map((c) => `<li><a href="/${esc(c.id)}" data-r="/${esc(c.id)}"><span>${esc(c.title.slice(0, 2).toUpperCase())}</span>${esc(c.title)}</a></li>`).join('')}</ul><h3>Site Info</h3><ul><li><a href="/about" data-r="/about"><span>AB</span>About</a></li><li><a href="/privacy-policy" data-r="/privacy-policy"><span>PP</span>Privacy Policy</a></li><li><a href="/contact" data-r="/contact"><span>CT</span>Contact</a></li></ul>`;
+    if (!leftNav) return;
     leftNav.querySelectorAll('a').forEach((a) => {
       const r = a.getAttribute('data-r');
+      a.classList.remove('active');
       if (active === r || (r !== '/' && active.startsWith(r + '/'))) a.classList.add('active');
     });
   }
   function renderRightNav() {
     const tip = D.tips[Math.floor(Math.random() * D.tips.length)];
-    rightNav.innerHTML = `<h3>Popular Orders</h3><ul><li><a href="/beginner-guide/first-fortress-tutorial"><span>01</span>First Fortress Tutorial</a></li><li><a href="/industry/steel-production"><span>02</span>How Steel Production Works</a></li><li><a href="/guides/best-fortress-layouts"><span>03</span>Best Fortress Layouts</a></li><li><a href="/guides/survive-first-winter"><span>04</span>Survive First Winter</a></li><li><a href="/military/squad-setup"><span>05</span>Military Guide</a></li><li><a href="/world/aquifers"><span>06</span>Aquifer Guide</a></li><li><a href="/mods/dfhack-commands"><span>07</span>Best DFHack Commands</a></li></ul><h3>Overseer Note</h3><p class="overseer-note">${esc(tip)}</p>`;
+    const tipEl = document.getElementById('overseerTip') || (rightNav && rightNav.querySelector('.overseer-note'));
+    if (tipEl) tipEl.textContent = tip;
   }
 
   function renderHome() {
@@ -199,7 +201,7 @@
     const clean = path.replace(/\/$/, '') || '/';
     if (clean === route()) return;
     history.pushState({}, '', clean);
-    leftNav.classList.remove('open');
+    if (leftNav) leftNav.classList.remove('open');
     navigate();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -209,6 +211,7 @@
     ...Object.entries(D.infoPages).map(([k, p]) => ({ title: p.title, sub: 'Site Info', href: '/' + k }))
   ];
   function runSearch(q) {
+    if (!searchResults) return;
     if (!q) {
       searchResults.classList.remove('open');
       return;
@@ -218,12 +221,14 @@
     searchResults.innerHTML = matches.length ? matches.map((m) => `<a href="${esc(m.href)}">${esc(m.title)}<span>${esc(m.sub)}</span></a>`).join('') : '<div class="empty">No fortress records match.</div>';
     searchResults.classList.add('open');
   }
-  searchInput.addEventListener('input', () => runSearch(searchInput.value.trim()));
-  searchInput.addEventListener('focus', () => runSearch(searchInput.value.trim()));
+  if (searchInput) {
+    searchInput.addEventListener('input', () => runSearch(searchInput.value.trim()));
+    searchInput.addEventListener('focus', () => runSearch(searchInput.value.trim()));
+  }
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href]');
     if (!a) {
-      if (!e.target.closest('.search')) searchResults.classList.remove('open');
+      if (searchResults && !e.target.closest('.search')) searchResults.classList.remove('open');
       return;
     }
     const href = a.getAttribute('href');
@@ -231,24 +236,24 @@
     const url = new URL(href, location.origin);
     if (url.origin !== location.origin) return;
     if (!window.__GW_PRERENDER__) {
-      searchInput.value = '';
-      searchResults.classList.remove('open');
+      if (searchInput) searchInput.value = '';
+      if (searchResults) searchResults.classList.remove('open');
       return;
     }
     e.preventDefault();
-    searchInput.value = '';
-    searchResults.classList.remove('open');
+    if (searchInput) searchInput.value = '';
+    if (searchResults) searchResults.classList.remove('open');
     go(url.pathname);
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === '/' && document.activeElement !== searchInput) {
+    if (searchInput && e.key === '/' && document.activeElement !== searchInput) {
       e.preventDefault();
       searchInput.focus();
     }
-    if (e.key === 'Escape') searchResults.classList.remove('open');
+    if (searchResults && e.key === 'Escape') searchResults.classList.remove('open');
   });
   window.addEventListener('popstate', () => { if (window.__GW_PRERENDER__) navigate(); });
-  if (menuToggle) menuToggle.onclick = () => leftNav.classList.toggle('open');
+  if (menuToggle && leftNav) menuToggle.onclick = () => leftNav.classList.toggle('open');
   if (window.__GW_PRERENDER__) {
     navigate();
   } else {

@@ -104,6 +104,8 @@ header.site {
 nav.top { display: flex; flex-wrap: wrap; gap: 2px; }
 nav.top a { color: var(--muted); padding: 7px 8px; font: 900 12px var(--font); text-transform: uppercase; border: 1px solid transparent; }
 nav.top a:hover { color: var(--gold); background: rgba(213,179,111,.08); border-color: rgba(213,179,111,.2); text-decoration: none; }
+nav.top a.hub-link { color: var(--steel); border-left-color: rgba(183,192,196,.32); }
+nav.top a.hub-link:hover { color: #e6f3f5; border-color: rgba(183,192,196,.42); background: rgba(73,106,130,.18); }
 .menu-toggle { display: none; border: 1px solid var(--line-bright); background: var(--panel); color: var(--text); padding: 8px 10px; }
 
 .engraving-bar {

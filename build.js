@@ -93,8 +93,6 @@ function buildPage(template, route) {
   html = html.replace(/<!-- dfw:head -->[\s\S]*?<!-- \/dfw:head -->/, '<!-- dfw:head -->\n' + headBlock(route) + '\n    <!-- /dfw:head -->');
   html = html.replace(/<script type="application\/ld\+json" id="dfw-jsonld">[\s\S]*?<\/script>/, '<script type="application/ld+json" id="dfw-jsonld">' + JSON.stringify(M.jsonLdFor(route)) + '</script>');
   const mainHtml = renderMain(route);
-  html = html.replace(/<aside class="left" id="leftNav">[\s\S]*?<\/aside>/, '<aside class="left" id="leftNav">' + els.leftNav._html + '</aside>');
-  html = html.replace(/<aside class="right" id="rightNav">[\s\S]*?<\/aside>/, '<aside class="right" id="rightNav">' + els.rightNav._html + '</aside>');
   html = html.replace(/<main id="main">[\s\S]*?<\/main>/, '<main id="main">' + mainHtml + '</main>');
   return html;
 }
