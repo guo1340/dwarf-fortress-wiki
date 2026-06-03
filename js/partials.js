@@ -13,4 +13,6 @@
   }
 
   document.querySelectorAll('[data-partial]').forEach(include);
+  window.__GW_PARTIALS_READY__ = true;
+  document.dispatchEvent(new CustomEvent('gamewikihub:partials-ready'));
 })();

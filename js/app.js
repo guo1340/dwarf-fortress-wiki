@@ -205,6 +205,11 @@
     navigate();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+  function finishLoading() {
+    const reveal = () => document.body && document.body.classList.remove('is-loading');
+    if (window.requestAnimationFrame) window.requestAnimationFrame(reveal);
+    else setTimeout(reveal, 0);
+  }
   const searchIndex = Array.isArray(D.searchIndex) ? D.searchIndex : [
     ...D.categories.map((c) => ({ title: c.title, sub: 'Category', href: '/' + c.id })),
     ...D.pages.map((p) => ({ title: p.title, sub: category(p.category).title, href: '/' + p.category + '/' + p.id, tags: p.stats.join(' ') })),
@@ -257,6 +262,9 @@
   if (window.__GW_PRERENDER__) {
     navigate();
   } else {
+    renderLeftNav(route());
+    renderRightNav();
     setTimeout(loadAds, 100);
   }
+  finishLoading();
 })();
