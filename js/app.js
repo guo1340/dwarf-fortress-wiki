@@ -65,6 +65,46 @@
   function sectionsHTML(sections) {
     return sections.map((s) => `<section class="article-section"><h3>${esc(s.h)}</h3>${s.body || ''}${s.list ? `<ul>${s.list.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</section>`).join('');
   }
+  const categoryGuidance = {
+    blueprints: [
+      {
+        h: 'How To Use These Blueprints',
+        body: '<p>Blueprints are starting points, not sacred diagrams. A good Dwarf Fortress layout solves one problem clearly: short hauling routes, safer entrances, cleaner industry chains, or a megaproject that can be expanded without trapping half the fort behind construction jobs.</p><p>When copying a layout, check your embark first. Soil depth, aquifers, magma access, cavern height and surface threats can all change what “best” means. The strongest designs are easy to seal, easy to inspect, and boring enough that you can find a broken stockpile rule before the fort starts starving.</p>'
+      },
+      {
+        h: 'Common Planning Mistakes',
+        list: [
+          'Building symmetrical halls that look good but force dwarves to haul across the entire map.',
+          'Putting bedrooms, workshops, stockpiles and hospitals wherever there is empty stone instead of near the systems they support.',
+          'Designing a defense entrance that cannot be locked down quickly during thieves, beasts or sieges.',
+          'Starting a megaproject before drink, food, bedrooms, refuse handling and militia training are stable.'
+        ]
+      },
+      {
+        h: 'Recommended Approach',
+        body: '<p>Start with the starter fortress blueprint, then graft on industry and defense modules as the fort earns them. If you are still learning, choose compact reliability over elegance. Once the survival loop is stable, use the megaproject examples for identity and spectacle.</p>'
+      }
+    ],
+    updates: [
+      {
+        h: 'How To Read Updates',
+        body: '<p>Dwarf Fortress updates are worth reading through a practical lens: what changes how you build, defend, assign labor, manage stress, or use the interface? Patch notes can mention dozens of fixes, but the important question for an active fortress is whether any change affects pathing, military behavior, workshops, saves, mods or DFHack workflows.</p><p>Returning players should scan update summaries before resuming an old fort. Even small interface and bug-fix changes can make old habits less efficient, especially around Steam edition quality-of-life tools, adventure mode work, workshop changes and community utility support.</p>'
+      },
+      {
+        h: 'Common Mistakes',
+        list: [
+          'Resuming a heavily modded save without checking whether Workshop mods and DFHack are compatible.',
+          'Assuming an old tutorial still matches the current Steam interface.',
+          'Treating patch notes as trivia instead of looking for changes that affect active fortress systems.',
+          'Ignoring dev diaries when planning long-term forts that depend on future systems or major mode updates.'
+        ]
+      },
+      {
+        h: 'Recommended Approach',
+        body: '<p>Use patch notes for immediate save safety and dev diary summaries for long-term expectations. If a change touches military, hauling, jobs, pathing, adventure mode or mod tooling, treat it as something to verify in a small test fort before risking a major mountainhome.</p>'
+      }
+    ]
+  };
   function setMeta(attr, key, value) {
     let el = document.head.querySelector(`meta[${attr}="${key}"]`);
     if (!el) {
@@ -125,7 +165,8 @@
     const c = category(id);
     if (!c) return render404(id);
     const pages = pagesIn(id);
-    main.innerHTML = `${adSlot('banner')}<section class="page"><h1>${esc(c.title)}</h1><div class="breadcrumb">Home / ${esc(c.title)}</div><p class="lead">${esc(c.summary)}</p><div class="cards">${pages.map((p) => `<a class="card" href="/${esc(p.category)}/${esc(p.id)}"><h4>${esc(p.title)}</h4><p>${esc(p.summary)}</p></a>`).join('')}</div></section>${adSlot('in-article')}`;
+    const guidance = categoryGuidance[id] ? `<div class="category-guidance">${sectionsHTML(categoryGuidance[id])}</div>` : '';
+    main.innerHTML = `${adSlot('banner')}<section class="page"><h1>${esc(c.title)}</h1><div class="breadcrumb">Home / ${esc(c.title)}</div><p class="lead">${esc(c.summary)}</p>${guidance}<div class="cards">${pages.map((p) => `<a class="card" href="/${esc(p.category)}/${esc(p.id)}"><h4>${esc(p.title)}</h4><p>${esc(p.summary)}</p></a>`).join('')}</div></section>${adSlot('in-article')}`;
   }
   function renderDetail(cat, id) {
     const c = category(cat);
@@ -136,7 +177,7 @@
   function renderInfo(slug) {
     const p = D.infoPages[slug];
     if (!p) return render404(slug);
-    main.innerHTML = `${adSlot('banner')}<section class="page legal-page"><h1>${esc(p.title)}</h1><div class="breadcrumb">Home / ${esc(p.title)}</div>${p.body}${sourceNotes(null)}</section>`;
+    main.innerHTML = `${adSlot('banner')}<section class="page legal-page"><h1>${esc(p.title)}</h1><div class="breadcrumb">Home / ${esc(p.title)}</div>${p.body}${sourceNotes(null)}</section>${adSlot('in-article')}`;
   }
   function render404(slug) {
     main.innerHTML = `<section class="page"><h1>Archive Page Missing</h1><p>No engraved record found for <code>${esc(slug)}</code>.</p><p><a href="/">Return to the mountainhome</a></p></section>`;
